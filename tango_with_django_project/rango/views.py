@@ -3,10 +3,12 @@ from django.http import HttpResponse
 import rango
 
 def index(request):
-    return HttpResponse("Rango says hey there partner! <a href ='/rango/about/'>About</a>")
+    message = "Rango says hey there partner! <a href='/rango/about/'>About</a>"
+    return HttpResponse(message)
 
 def about(request):
-    return HttpResponse("Rango says here is the about page. <a href = '/rango/'>Index</a>")
+    message = "Rango says here is the about page. <a href='/rango/'>Index</a>"
+    return HttpResponse(message)
 
 
 
