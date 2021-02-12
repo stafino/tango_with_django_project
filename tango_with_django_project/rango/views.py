@@ -3,13 +3,11 @@ from django.http import HttpResponse
 import rango
 
 def index(request):
-    message = "Rango says hey there partner! <a href='/rango/about/'>About</a>"
-    return HttpResponse(message)
+    context_dict = {'boldmessage': 'Crunchy, creamy, cookie, candy, cupcake!'}
+    return render(request, 'rango/index.html', context=context_dict)
 
 def about(request):
-    message = "Rango says here is the about page. <a href='/rango/'>Index</a>"
-    return HttpResponse(message)
-
+    return render(request, 'rango/about.html')
 
 
 
